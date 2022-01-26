@@ -43,4 +43,23 @@ export const useStyles = makeStyles(() => ({
     },
 
     //decorator
+    decorator: {
+        display: "flex",
+        fontWeight: "bolder",
+        fontFamily: "roboto",
+        position: "relative",
+        marginTop: "20px",
+        '&:before':{
+            width:"45px",
+            height: "45px",
+            backgroundColor: Theme.colors.primary,
+            content: '""',
+            borderRadius: "50%",
+        },
+    },
+    decoratorText: {
+        lineHeight: "45px",
+        position: "absolute",
+        left: "25px",
+    }
 }));
