@@ -28,7 +28,7 @@ export default function Navbar() {
                     </Box>
                 </Box>
                 <Box component={Hidden} smUp>
-                    <IconButton color="inherit">
+                    <IconButton color="inherit" onClick={() => console.log("Menu Clicked") }>
                         <MenuOpenRoundedIcon/>
                     </IconButton>
                 </Box>
