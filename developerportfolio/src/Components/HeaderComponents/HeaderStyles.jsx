@@ -58,8 +58,13 @@ export const useStyles = makeStyles(() => ({
         },
     },
     decoratorText: {
-        lineHeight: "45px",
+        lineHeight: "40px",
         position: "absolute",
-        left: "25px",
+        left: "20px",
+    },
+    arrow: {
+        lineHeight: "50px",
+        position: "absolute",
+        left: "95px",
     }
 }));
