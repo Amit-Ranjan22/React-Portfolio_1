@@ -1,11 +1,7 @@
 import React from 'react';
 import { Box, makeStyles } from '@material-ui/core'
+import { useStyles } from './HeaderStyles';
 
-const useStyles = makeStyles(() => ({
-    HeaderWrapper:{
-        color: "red"
-    }
-}))
 
 function HeadersComponent() {
     const classes = useStyles()
