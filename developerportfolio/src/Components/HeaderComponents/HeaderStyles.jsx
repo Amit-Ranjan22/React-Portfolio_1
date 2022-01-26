@@ -12,7 +12,7 @@ export const useStyles = makeStyles(() => ({
         backgroundRepeat: "no-repeat",
     },
     Headercontainer:{
-        width: "100%",
+        width: "85%",
         minHeight: "90vh",
         height: "auto",
         padding: "20px",
@@ -75,12 +75,12 @@ export const useStyles = makeStyles(() => ({
     "@global": {
         "@keyframes upDown":{
             "0%":{
-                transform: "scale(0)",
+                transform: "scale(1,1)",
                 paddingTop:"0px",
                 
             },
             "100%":{
-                transform: "scale(1)",
+                transform: "scale(1,2)",
                 paddingTop:"10px",
             },
         }

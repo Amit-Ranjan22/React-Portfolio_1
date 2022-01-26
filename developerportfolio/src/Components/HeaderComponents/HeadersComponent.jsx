@@ -12,10 +12,10 @@ function HeadersComponent() {
             <Navbar />
             <Box className={classes.Headercontainer}>
                 <Typography variant='h3' component="h4" className={classes.headerTitle}>
-                    Hello!!
+                    Hello!! I Am Full-Stack
                 </Typography>
                 <Typography variant='h3' component="h4" className={classes.headerDesc}>
-                    I'm A Full-Stack Web-Developer
+                    Web-Developer
                 </Typography>
 
                 <Box className={classes.decorator}>
