@@ -20,4 +20,7 @@ export const useStyles = makeStyles(() => ({
         flexFlow: "row wrap",
         justifyContent: "space-between",
     },
-}))
+    navlinks:{
+        color: Theme.colors.base2,
+    }
+}));
