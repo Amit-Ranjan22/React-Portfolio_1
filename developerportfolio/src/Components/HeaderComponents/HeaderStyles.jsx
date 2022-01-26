@@ -66,5 +66,23 @@ export const useStyles = makeStyles(() => ({
         lineHeight: "50px",
         position: "absolute",
         left: "95px",
+        animationName: "upDown",
+        animationDuration: "1.0s",
+        animationIterationCount: "infinite"
+    },
+
+    //creating animation
+    "@global": {
+        "@keyframes upDown":{
+            "0%":{
+                transform: "scale(0)",
+                paddingTop:"0px",
+                
+            },
+            "100%":{
+                transform: "scale(1)",
+                paddingTop:"10px",
+            },
+        }
     }
 }));
