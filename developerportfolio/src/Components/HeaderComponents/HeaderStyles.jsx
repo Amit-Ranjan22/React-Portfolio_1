@@ -11,6 +11,24 @@ export const useStyles = makeStyles(() => ({
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
     },
+    Headercontainer:{
+        width: "100%",
+        minHeight: "90vh",
+        height: "auto",
+        padding: "20px",
+        color: Theme.colors.base2,
+        display: "flex",
+        flexFlow: "column wrap",
+        justifyContent: "center",
+        fontFamily: "roboto",
+    },
+    headerTitle: {
+        fontSize: "3rem",
+        // testAlign: "left"
+    },
+    headerDesc: {
+        fontSize: "2rem",
+    },
     navbar:{
         backgroundColor:Theme.colors.base1,
         color: Theme.colors.base2,
@@ -22,5 +40,7 @@ export const useStyles = makeStyles(() => ({
     },
     navlinks:{
         color: Theme.colors.base2,
-    }
+    },
+
+    //decorator
 }));
