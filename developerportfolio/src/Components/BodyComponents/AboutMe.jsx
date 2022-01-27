@@ -9,16 +9,20 @@ export default function AboutMe() {
     return (
         <Box className={classes.section}>
             <Container>
-                <Grid container>
-                    <Grid item sm={5}>
-                        <img
-                            src={image}
-                            alt="about me"
-                            className={classes.responsiveImg} />
+                <Grid container spacing={1}>
+                    <Grid item sm={5} >
+                        <Box component={Hidden} xsDown>
+                            <img
+                                src={image}
+                                alt="about me"
+                                className={classes.responsiveImg}
+                            />
+                        </Box>
+
                     </Grid>
                     <Grid item xs={12} sm={7}>
                         {RenderSectionHeading({
-                            smallText: "About Me",
+                            smallTxt: "ABOUT ME",
                             heading: "Hello! I'm Amitabh Ranjan",
                             description: "Adaptability is the keyword which has become the all encompassing factor touching upon every aspect of my life since last few years of my life, be it social, personal or professional!"
                         })}

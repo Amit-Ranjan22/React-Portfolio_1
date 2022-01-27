@@ -18,4 +18,13 @@ export const useStyles = makeStyles((theme) => ({
         width: "100%",
         height: "auto",
     },
+    sectionHeadingCont:{
+        padding:theme.spacing(1), 
+        color:Theme.colors.base2,  
+    },
+    sectionHeading:{
+        color:Theme.colors.base2,
+        margin:theme.spacing(2,0),
+    },
+    
 }));

@@ -18,15 +18,16 @@ export const Decorator = ({ label, withIcon, Icon, styles }) => {
     );
 };
 
-export const Divider = () => {
+export const Divider = ({style}) => {
     const classes = BodyStyles();
-    return <Typography variant="span" className={classes.divider}></Typography>
+    // return <Typography variant="span" className={classes.divider}></Typography>
+    return <div className={classes.divider} style={style}></div>;
 }
 
 export const RenderSectionHeading = ({ smallTxt, heading, description, alignCenter }) => {
     const classes = BodyStyles();
     return (
-        <Box>
+        <Box className={classes.sectionHeadingCont}>
             {Decorator({
                 label: smallTxt,
                 withIcon: false,
@@ -38,12 +39,16 @@ export const RenderSectionHeading = ({ smallTxt, heading, description, alignCent
                 className={classes.sectionHeading}>
                 {heading}
             </Typography>
-            {Divider()}
+            {/* {Divider()} */}
+            {Divider({
+        style: alignCenter ? { margin: "16px auto" } : { margin: "16px 0px" },
+      })}
+
             <Typography
                 variant="body1"
                 component="h6"
                 align={alignCenter ? "center" : "left"}
-                className={classes.sectionHeading}>
+                className={classes.sectionDesc}>
                 {description}
             </Typography>
         </Box>
