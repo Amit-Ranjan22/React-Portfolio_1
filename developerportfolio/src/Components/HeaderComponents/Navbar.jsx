@@ -23,7 +23,7 @@ export default function Navbar() {
                 <Box component={Hidden} xsDown>
                     <Box>
                         {navlinks.map((item, i) => (
-                            <Button className={classes.navlinks}>{item.label}</Button>
+                            <Button key={i} className={classes.navlinks}>{item.label}</Button>
                         ))}
                     </Box>
                 </Box>

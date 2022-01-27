@@ -8,23 +8,37 @@ export const useStyles = makeStyles((theme) => ({
     },
 
     //common
-    divider:{
+    divider: {
         width: "65px",
         height: "4px",
         backgroundColor: Theme.colors.primary,
     },
 
-    responsiveImg:{
+    responsiveImg: {
         width: "100%",
         height: "auto",
     },
-    sectionHeadingCont:{
-        padding:theme.spacing(1), 
-        color:Theme.colors.base2,  
+    sectionHeadingCont: {
+        padding: theme.spacing(1),
+        color: Theme.colors.base2,
     },
-    sectionHeading:{
+    sectionHeading: {
+        color: Theme.colors.base2,
+        margin: theme.spacing(2, 0),
+    },
+    AvatarCont: {
+        "element.style": {
+            display: "flex",
+            flexFlow: "row",
+            justifyContent: "center",
+            alignItems: "center"
+        }
+    },
+    avatar:{
+        backgroundColor:Theme.colors.primary,
         color:Theme.colors.base2,
-        margin:theme.spacing(2,0),
     },
-    
+    MediaText:{
+        color: Theme.colors.base2,
+    }
 }));

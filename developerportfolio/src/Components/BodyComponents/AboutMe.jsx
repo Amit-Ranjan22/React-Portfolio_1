@@ -1,8 +1,9 @@
-import { Box, CardMedia, Container, Grid, Hidden } from '@material-ui/core';
+import { Box, Container, Grid, Hidden } from '@material-ui/core';
 import React from 'react';
 import { useStyles } from './BodyStyles';
 import image from "../../images/About.jpg"
-import { RenderSectionHeading } from '../common/commonComponent';
+import { RenderSectionHeading, CardMedia } from '../common/commonComponent';
+import AcUnitIcon from '@material-ui/icons/AcUnit';
 
 export default function AboutMe() {
     const classes = useStyles();
@@ -27,7 +28,7 @@ export default function AboutMe() {
                             description: "Adaptability is the keyword which has become the all encompassing factor touching upon every aspect of my life since last few years of my life, be it social, personal or professional!"
                         })}
                         <br/>
-                        
+                        {CardMedia({label:"label1",Desc:"Desc1",Icon:<AcUnitIcon/>})}
                     </Grid>
                 </Grid>
             </Container>

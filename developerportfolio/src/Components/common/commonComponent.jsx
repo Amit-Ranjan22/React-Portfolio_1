@@ -6,11 +6,11 @@ export const Decorator = ({ label, withIcon, Icon, styles }) => {
     const classes = useStyles();
     return (
         <Box className={classes.decorator} style={styles}>
-            <Typography variant="span" className={classes.decoratorText}>
+            <Typography component="span" className={classes.decoratorText}>
                 {label}
             </Typography>
             {withIcon ? (
-                <Typography variant="span" className={classes.arrow}>
+                <Typography component="span" className={classes.arrow}>
                     {Icon}
                 </Typography>
             ) : null}
@@ -56,13 +56,13 @@ export const RenderSectionHeading = ({ smallTxt, heading, description, alignCent
 }
 
 export const CardMedia = ({label,Desc,Icon}) => {
-    const classes = useStyles()
+    const classes = BodyStyles()
     return (
     <Grid container>
-        <Grid item xs={4}>
-            <Avatar>{Icon}</Avatar>
+        <Grid item xs={3} className="classes.AvatarCont">
+            <Avatar className={classes.avatar}>{Icon}</Avatar>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={9} className={classes.MediaText}>
             <Typography variant="body1" component='h6' gutterBottom>{label}</Typography>
             <Typography variant="caption" gutterBottom>{Desc}</Typography>
         </Grid>
