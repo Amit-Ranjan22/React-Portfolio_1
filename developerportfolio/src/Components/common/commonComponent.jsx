@@ -1,4 +1,4 @@
-import { Box, Typography } from "@material-ui/core"
+import { Avatar, Box, Grid, Typography } from "@material-ui/core"
 import { useStyles } from "../HeaderComponents/HeaderStyles"
 import { useStyles as BodyStyles } from "../BodyComponents/BodyStyles";
 
@@ -18,7 +18,7 @@ export const Decorator = ({ label, withIcon, Icon, styles }) => {
     );
 };
 
-export const Divider = ({style}) => {
+export const Divider = ({ style }) => {
     const classes = BodyStyles();
     // return <Typography variant="span" className={classes.divider}></Typography>
     return <div className={classes.divider} style={style}></div>;
@@ -41,8 +41,8 @@ export const RenderSectionHeading = ({ smallTxt, heading, description, alignCent
             </Typography>
             {/* {Divider()} */}
             {Divider({
-        style: alignCenter ? { margin: "16px auto" } : { margin: "16px 0px" },
-      })}
+                style: alignCenter ? { margin: "16px auto" } : { margin: "16px 0px" },
+            })}
 
             <Typography
                 variant="body1"
@@ -54,3 +54,19 @@ export const RenderSectionHeading = ({ smallTxt, heading, description, alignCent
         </Box>
     )
 }
+
+export const CardMedia = ({label,Desc,Icon}) => {
+    const classes = useStyles()
+    return (
+    <Grid container>
+        <Grid item xs={4}>
+            <Avatar>{Icon}</Avatar>
+        </Grid>
+        <Grid item xs={8}>
+            <Typography variant="body1" component='h6' gutterBottom>{label}</Typography>
+            <Typography variant="caption" gutterBottom>{Desc}</Typography>
+        </Grid>
+    </Grid>
+    )
+}
+

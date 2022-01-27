@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Hidden } from '@material-ui/core';
+import { Box, CardMedia, Container, Grid, Hidden } from '@material-ui/core';
 import React from 'react';
 import { useStyles } from './BodyStyles';
 import image from "../../images/About.jpg"
@@ -26,6 +26,8 @@ export default function AboutMe() {
                             heading: "Hello! I'm Amitabh Ranjan",
                             description: "Adaptability is the keyword which has become the all encompassing factor touching upon every aspect of my life since last few years of my life, be it social, personal or professional!"
                         })}
+                        <br/>
+                        
                     </Grid>
                 </Grid>
             </Container>
