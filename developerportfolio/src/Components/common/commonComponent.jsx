@@ -1,6 +1,6 @@
 import { Box, Typography } from "@material-ui/core"
 import { useStyles } from "../HeaderComponents/HeaderStyles"
-import ArrowDownwardRoundedIcon from '@material-ui/icons/ArrowDownwardRounded';
+
 
 export const Decorator = ({ label, withIcon, Icon }) => {
     const classes = useStyles();
@@ -17,3 +17,7 @@ export const Decorator = ({ label, withIcon, Icon }) => {
         </Box>
     );
 };
+
+export const RenderSectionHeading = () => {
+    
+}

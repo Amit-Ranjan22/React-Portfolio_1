@@ -1,15 +1,17 @@
 import './App.css';
 import HeadersComponent from './Components/HeaderComponents/HeadersComponent';
-
+import AboutUs from './Components/BodyComponents/AboutMe'
 
 function App() {
   return (
-    // <h1>App works well</h1>
+    <div>
+    {/* // <h1>App works well</h1> */}
     <HeadersComponent/>
-    // <AboutUs/>
-    // <Portfolio/>
+    <AboutUs/>
+    {/*// <Portfolio/>
     // <Contact/>
-    // <Footer/>
+    // <Footer/> */}
+    </div>
   );
 }
 
