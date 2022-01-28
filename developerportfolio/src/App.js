@@ -1,6 +1,7 @@
 import './App.css';
 import HeadersComponent from './Components/HeaderComponents/HeadersComponent';
 import AboutUs from './Components/BodyComponents/AboutMe'
+import Portfolio from "./Components/BodyComponents/Portfolio";
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
     {/* // <h1>App works well</h1> */}
     <HeadersComponent/>
     <AboutUs/>
-    {/*// <Portfolio/>
+    <Portfolio />
+    {/* // 
     // <Contact/>
     // <Footer/> */}
     </div>
