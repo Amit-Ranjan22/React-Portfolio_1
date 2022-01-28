@@ -55,10 +55,10 @@ export const RenderSectionHeading = ({ smallTxt, heading, description, alignCent
     )
 }
 
-export const CardMedia = ({label,Desc,Icon}) => {
+export const CardMedia = ({label,Desc,Icon,key}) => {
     const classes = BodyStyles()
     return (
-    <Grid container>
+    <Grid container key={key}>
         <Grid item xs={3} className="classes.AvatarCont">
             <Avatar className={classes.avatar}>{Icon}</Avatar>
         </Grid>
