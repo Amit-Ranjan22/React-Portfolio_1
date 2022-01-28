@@ -4,24 +4,25 @@ import { useStyles } from './BodyStyles';
 import image from "../../images/contactus.jpg"
 import { RenderSectionHeading } from '../common/commonComponent';
 import { useState } from 'react';
+import { RenderInputText } from '../common/FormComponent';
 
 
 export default function Contact() {
     const classes = useStyles();
-    const [state, setState] =useState({
-        data:{
+    const [state, setState] = useState({
+        data: {
             firstname: "",
             email: "",
             messages: "",
         },
     })
 
-    const handleOnChange = ({target}) => {
-        const {data} = state;
+    const handleOnChange = ({ target }) => {
+        const { data } = state;
         data[target.name] = target.value
-        setState({data: data});
+        setState({ data: data });
     };
-    
+
 
     return (
         <Box className={classes.section} id='Contact'>
@@ -45,16 +46,36 @@ export default function Contact() {
                         })}
                         <br />
                         <form>
-                            <Grid container>
-                                <Grid item xs={12} sm={8}></Grid>
-                                <TextField
-                                    label="firstname"
-                                    variant="outlined"
-                                    fullWidth={true}
-                                    name='firstname'
-                                    value={state.data.firstname}
-                                    onChange={handleOnChange}
-                                />
+                            <Grid container
+                                direction="row"
+                                justifyContent="center"
+                                alignItems="center">
+                                <Grid item xs={12} sm={10} style={{marginBottom:"16px"}}>
+                                    {RenderInputText({
+                                        label: "First Name",
+                                        name: "firstName",
+                                        state: state,
+                                        onChange: handleOnChange,
+                                    })}
+                                </Grid>
+                                <Grid item xs={12} sm={10} style={{marginBottom:"16px"}}>
+                                    {RenderInputText({
+                                        label: "Email",
+                                        name: "email",
+                                        state: state,
+                                        onChange: handleOnChange,
+                                    })}
+                                </Grid>
+                                <Grid item xs={12} sm={10} style={{marginBottom:"16px"}}>
+                                    {RenderInputText({
+                                        label: "Messages",
+                                        name: "messages",
+                                        state: state,
+                                        onChange: handleOnChange,
+                                        multiline: true,
+                                        rows: 5,
+                                    })}
+                                </Grid>
                             </Grid>
                         </form>
                     </Grid>
