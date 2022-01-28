@@ -55,18 +55,34 @@ export const RenderSectionHeading = ({ smallTxt, heading, description, alignCent
     )
 }
 
-export const CardMedia = ({label,Desc,Icon,key}) => {
-    const classes = BodyStyles()
-    return (
-    <Grid container key={key}>
-        <Grid item xs={3} className="classes.AvatarCont">
-            <Avatar className={classes.avatar}>{Icon}</Avatar>
-        </Grid>
-        <Grid item xs={9} className={classes.MediaText}>
-            <Typography variant="body1" component='h6' gutterBottom>{label}</Typography>
-            <Typography variant="caption" gutterBottom>{Desc}</Typography>
-        </Grid>
-    </Grid>
-    )
-}
+// export const CardMedia = ({label,Desc,Icon,key}) => {
+//     const classes = BodyStyles();
+//     return (
+//     <Grid container key={key}>
+//         <Grid item xs={3} className="classes.AvatarCont">
+//             <Avatar className={classes.avatar}>{Icon}</Avatar>
+//         </Grid>
+//         <Grid item xs={9} className={classes.MediaText}>
+//             <Typography variant="body1" component='h6' gutterBottom>{label}</Typography>
+//             <Typography variant="caption" gutterBottom>{Desc}</Typography>
+//         </Grid>
+//     </Grid>
+//     )
+// }
 
+export const CardMedia = ({ label, Desc, Icon, key }) => {
+  const classes = BodyStyles();
+  return (
+    <Grid container style={{ marginTop: "16px" }}>
+      <Grid item xs={3} className={classes.AvatarCont}>
+        <Avatar className={classes.avatar}>{Icon}</Avatar>
+      </Grid>
+      <Grid item xs={9} className={classes.MediaText}>
+        <Typography variant='body1' component='h6'>
+          {label}
+        </Typography>
+        <Typography variant='caption'>{Desc}</Typography>
+      </Grid>
+    </Grid>
+  );
+};

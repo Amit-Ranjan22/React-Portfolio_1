@@ -10,11 +10,11 @@ import StorageIcon from '@material-ui/icons/Storage';
 
 export default function AboutMe() {
     const classes = useStyles();
-    const CardMediaData = [
-        { title: "Html", description: "Worked on 14 projects for boot-camp where I applied the corresponding skill set. Considering I am new to this broadening field of coding, it was quite interesting and challenging to learn the technicalities and its application.", icon: <CodeIcon /> },
-        { title: "CSS", description: "Worked on 14 projects for boot-camp where I applied the corresponding skill set. Considering I am new to this broadening field of coding, it was quite interesting and challenging to learn the technicalities and its application.", icon: <AcUnitIcon /> },
-        { title: "JavaScript", description: "Worked on 14 projects for boot-camp where I applied the corresponding skill set. Considering I am new to this broadening field of coding, it was quite interesting and challenging to learn the technicalities and its application.", icon: <WebIcon /> },
-        { title: "MySql", description: "Worked on 14 projects for boot-camp where I applied the corresponding skill set. Considering I am new to this broadening field of coding, it was quite interesting and challenging to learn the technicalities and its application.", icon: <StorageIcon /> },
+    const cardMediaData = [
+        { title: "Html", description: "Lorem ipsum dolor sit amet Consectetur adipisicing elit.", icon: <CodeIcon /> },
+        { title: "CSS", description: "Lorem ipsum dolor sit amet Consectetur adipisicing elit.", icon: <AcUnitIcon /> },
+        { title: "JavaScript", description: "Lorem ipsum dolor sit amet Consectetur adipisicing elit.", icon: <WebIcon /> },
+        { title: "MySql", description: "Lorem ipsum dolor sit amet Consectetur adipisicing elit.", icon: <StorageIcon /> },
     ]
     return (
         <Box className={classes.section}>
@@ -38,16 +38,18 @@ export default function AboutMe() {
                         })}
                         <br />
                         {/* {CardMedia({label:"label1",Desc:"Desc1",Icon:<AcUnitIcon/>})} */}
-                        <Box>
-                            {CardMediaData.map((item, i) =>
-                                CardMedia({
-                                    label: item.title,
-                                    Desc: item.description,
-                                    Icon: item.icon,
-                                    key:{i},
-                                })
-                            )}
-                        </Box>
+                        <Grid container>
+                            {cardMediaData.map((item, i) => (
+                                <Grid item xs={12} sm={6} key={i}>
+                                    {CardMedia({
+                                        label: item.title,
+                                        Desc: item.description,
+                                        Icon: item.icon,
+                                    })}
+                                </Grid>
+
+                            ))}
+                        </Grid>
                     </Grid>
                 </Grid>
             </Container>
