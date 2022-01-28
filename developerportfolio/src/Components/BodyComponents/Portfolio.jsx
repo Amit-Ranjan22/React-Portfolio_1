@@ -1,4 +1,4 @@
-import { Box, Grid } from '@material-ui/core';
+import { Box, Button, Grid, Typography } from '@material-ui/core';
 import React from 'react';
 import { RenderSectionHeading } from '../common/commonComponent';
 // import { useStyles } from '../HeaderComponents/HeaderStyles';
@@ -20,18 +20,18 @@ export default function Portfolio() {
     const classes = useStyles()
 
     const portfolioData = [
-        {url:image1,title:"# Portfolio",link:""},
-        {url:image2,title:"# Portfolio",link:""},
-        {url:image3,title:"# Portfolio",link:""},
-        {url:image4,title:"# Portfolio",link:""},
-        {url:image5,title:"# Portfolio",link:""},
-        {url:image6,title:"# Portfolio",link:""},
-        {url:image7,title:"# Portfolio",link:""},
-        {url:image8,title:"# Portfolio",link:""},
-        {url:image9,title:"# Portfolio",link:""},
-        {url:image10,title:"# Portfolio",link:""},
-        {url:image11,title:"# Portfolio",link:""},
-        {url:image12,title:"# Portfolio",link:""},
+        { url: image1, title: "# Portfolio", link: "" },
+        { url: image2, title: "# Portfolio", link: "" },
+        { url: image3, title: "# Portfolio", link: "" },
+        { url: image4, title: "# Portfolio", link: "" },
+        { url: image5, title: "# Portfolio", link: "" },
+        { url: image6, title: "# Portfolio", link: "" },
+        { url: image7, title: "# Portfolio", link: "" },
+        { url: image8, title: "# Portfolio", link: "" },
+        { url: image9, title: "# Portfolio", link: "" },
+        { url: image10, title: "# Portfolio", link: "" },
+        { url: image11, title: "# Portfolio", link: "" },
+        { url: image12, title: "# Portfolio", link: "" },
     ]
     return (
         <Box className={classes.sectionDark} id="Portfolio">
@@ -52,16 +52,21 @@ export default function Portfolio() {
             </Grid>
             <container maxWidth="xl">
                 <Grid container spacing={2}>
-                    {portfolioData.map((item,i) => (
-                    <Grid item xs={6} sm={4} lg={3} key={i}>
-                        <Box className={classes.imageContainer}>
-                            <img
-                                src={item.url}
-                                alt={item.title}
-                                className={classes.responsiveImg} 
+                    {portfolioData.map((item, i) => (
+                        <Grid item xs={6} sm={4} lg={3} key={i}>
+                            <Box className={classes.imageContainer}>
+                                <img
+                                    src={item.url}
+                                    alt={item.title}
+                                    className={classes.responsiveImg}
                                 />
-                        </Box>
-                    </Grid>
+                                <Box className={classes.imageOverlay}>
+                                    <Typography className={classes.overlayTitle}>{item.title}</Typography>
+
+                                    <Button variant="contained">Visit</Button>
+                                </Box>
+                            </Box>
+                        </Grid>
                     ))}
                 </Grid>
             </container>

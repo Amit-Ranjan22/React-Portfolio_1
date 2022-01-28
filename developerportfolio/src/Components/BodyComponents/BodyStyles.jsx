@@ -50,5 +50,37 @@ export const useStyles = makeStyles((theme) => ({
     },
     MediaText:{
         color: Theme.colors.base2,
+    },
+
+     // # portfolio section
+    imageContainer:{
+        position: "relative",
+        '&:hover $imageOverlay':{
+            opacity:1
+        },
+    },
+    imageOverlay:{
+        position: "absolute",
+        width: "100%",
+        height: "100%",
+        top: 0,
+        left: 0,
+        backgroundColor: Theme.colors.primary,
+        color: Theme.colors.base2,
+        display: "flex",
+        flexFlow: "column wrap",
+        justifyContent: "center",
+        alignItems: "center",
+        opacity:0,
+        transition: "0.7s"
+    },
+    overlayTitle:{
+        fontSize: "2rem",
+        marginBottom: "16px",
+        [theme.breakpoints.down('xs')]:{
+            fontSize: "1.2rem",
+        }
     }
+
+
 }));
