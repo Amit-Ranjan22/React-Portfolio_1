@@ -3,6 +3,7 @@ import HeadersComponent from './Components/HeaderComponents/HeadersComponent';
 import AboutUs from './Components/BodyComponents/AboutMe'
 import Portfolio from "./Components/BodyComponents/Portfolio";
 import Contact from "./Components/BodyComponents/Contact"
+import Footer from "./Components/BodyComponents/Footer"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <AboutUs/>
     <Portfolio />
     <Contact/>
+    <Footer/>
     </div>
   );
 }
