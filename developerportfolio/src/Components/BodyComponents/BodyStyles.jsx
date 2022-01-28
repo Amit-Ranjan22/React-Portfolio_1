@@ -6,12 +6,16 @@ export const useStyles = makeStyles((theme) => ({
         backgroundColor: Theme.colors.base1,
         padding: theme.spacing(10, 0, 8, 0),
     },
+    sectionDark: {
+        backgroundColor: Theme.colors.primary1,
+        padding: theme.spacing(10, 0, 8, 0),
+    },
 
     //common
     divider: {
-        width: "65px",
+        width: "64px",
         height: "4px",
-        backgroundColor: Theme.colors.primary,
+        backgroundColor: Theme.colors.primary,      
     },
 
     responsiveImg: {
@@ -24,16 +28,22 @@ export const useStyles = makeStyles((theme) => ({
     },
     sectionHeading: {
         color: Theme.colors.base2,
-        margin: theme.spacing(2, 0),
+        margin: theme.spacing(1, 0),
     },
+    // AvatarCont: {
+    //     "element.style": {
+    //         display: "flex",
+    //         flexFlow: "row",
+    //         justifyContent: "center",
+    //         alignItems: "center"
+    //     }
+    // },
     AvatarCont: {
-        "element.style": {
-            display: "flex",
-            flexFlow: "row",
-            justifyContent: "center",
-            alignItems: "center"
-        }
-    },
+    display: "flex",
+    flexFlow: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
     avatar:{
         backgroundColor:Theme.colors.primary,
         color:Theme.colors.base2,

@@ -39,7 +39,6 @@ export const RenderSectionHeading = ({ smallTxt, heading, description, alignCent
                 className={classes.sectionHeading}>
                 {heading}
             </Typography>
-            {/* {Divider()} */}
             {Divider({
                 style: alignCenter ? { margin: "16px auto" } : { margin: "16px 0px" },
             })}
