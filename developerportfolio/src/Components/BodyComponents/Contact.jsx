@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Hidden, TextField } from '@material-ui/core';
+import { Box, Button, Container, Grid, Hidden, TextField } from '@material-ui/core';
 import React from 'react';
 import { useStyles } from './BodyStyles';
 import image from "../../images/contactus.jpg"
@@ -15,7 +15,7 @@ export default function Contact() {
             email: "",
             messages: "",
         },
-        errors:{}
+        errors: {}
     })
 
     const handleOnChange = ({ target }) => {
@@ -27,6 +27,11 @@ export default function Contact() {
         setState({ data: data, errors: errors });
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log("submitted", state.data);
+        //api call to post data
+    }
 
     return (
         <Box className={classes.section} id='Contact'>
@@ -44,17 +49,17 @@ export default function Contact() {
                     </Grid>
                     <Grid item xs={12} sm={7}>
                         {RenderSectionHeading({
-                            heading: "Contact Me",
+                            heading: "Message Me",
                             smallTxt: "Wish to contact me!",
                             description: "Please use the below given form to send me your message"
                         })}
                         <br />
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <Grid container
                                 direction="row"
                                 justifyContent="center"
                                 alignItems="center">
-                                <Grid item xs={12} sm={10} style={{marginBottom:"16px"}}>
+                                <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
                                     {RenderInputText({
                                         label: "First Name",
                                         name: "firstName",
@@ -62,7 +67,7 @@ export default function Contact() {
                                         onChange: handleOnChange,
                                     })}
                                 </Grid>
-                                <Grid item xs={12} sm={10} style={{marginBottom:"16px"}}>
+                                <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
                                     {RenderInputText({
                                         label: "Email",
                                         name: "email",
@@ -70,7 +75,7 @@ export default function Contact() {
                                         onChange: handleOnChange,
                                     })}
                                 </Grid>
-                                <Grid item xs={12} sm={10} style={{marginBottom:"16px"}}>
+                                <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
                                     {RenderInputText({
                                         label: "Messages",
                                         name: "messages",
@@ -79,6 +84,11 @@ export default function Contact() {
                                         multiline: true,
                                         rows: 5,
                                     })}
+                                </Grid>
+                                <Grid item xs={12} sm={8} style={{ marginBottom: "16px" }}>
+                                    <Button variant="outlined" type="submit" fullWidth={true}>
+                                        Submit
+                                    </Button>
                                 </Grid>
                             </Grid>
                         </form>
