@@ -86,7 +86,11 @@ export default function Contact() {
                                     })}
                                 </Grid>
                                 <Grid item xs={12} sm={8} style={{ marginBottom: "16px" }}>
-                                    <Button variant="outlined" type="submit" fullWidth={true}>
+                                    <Button
+                                        variant="outlined"
+                                        type="submit"
+                                        fullWidth={true}
+                                        className={classes.submitBtn}>
                                         Submit
                                     </Button>
                                 </Grid>

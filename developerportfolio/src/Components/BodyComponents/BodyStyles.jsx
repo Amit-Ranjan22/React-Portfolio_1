@@ -80,6 +80,20 @@ export const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('xs')]:{
             fontSize: "1.2rem",
         }
+    },
+
+    //form container
+    formContainer: {
+        padding: theme.spacing(2),
+        margin: theme.spacing(2,0),
+    },
+
+    submitBtn:{
+        backgroundColor: Theme.colors.primary,
+        color: Theme.colors.base2,
+        '&:hover':{
+            backgroundColor: Theme.colors.primary1,
+        }
     }
 
 
