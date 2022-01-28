@@ -15,12 +15,16 @@ export default function Contact() {
             email: "",
             messages: "",
         },
+        errors:{}
     })
 
     const handleOnChange = ({ target }) => {
-        const { data } = state;
+        const { data, errors } = state;
+        //setting error
+        target.value.length < 3 ? errors[target.name] = `${target.name} must have at-least 3 character` : (errors[target.name] = "");
+
         data[target.name] = target.value
-        setState({ data: data });
+        setState({ data: data, errors: errors });
     };
 
 

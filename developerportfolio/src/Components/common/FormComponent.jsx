@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     disabled: {},
 }))
 export const RenderInputText = ({ name, label, state, onChange, multiline, rows }) => {
-    const { data } = state;
+    const { data, errors } = state;
     const classes = useStyles();
     return (
         <TextField
@@ -52,6 +52,8 @@ export const RenderInputText = ({ name, label, state, onChange, multiline, rows 
             fullWidth={true}
             name={name}
             value={data[name]}
+            error={errors[name] ? true : false}
+            helperText={errors[name]}
             onChange={onChange}
             multiline={multiline}
             rows={rows}
