@@ -17,7 +17,7 @@ export default function AboutMe() {
         { title: "MySql", description: "Lorem ipsum dolor sit amet Consectetur adipisicing elit.", icon: <StorageIcon /> },
     ]
     return (
-        <Box className={classes.section}>
+        <Box className={classes.section} id='About'>
             <Container>
                 <Grid container spacing={1}>
                     <Grid item sm={5} >

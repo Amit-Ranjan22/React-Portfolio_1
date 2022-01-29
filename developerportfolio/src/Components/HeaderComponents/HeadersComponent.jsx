@@ -4,6 +4,7 @@ import { useStyles } from './HeaderStyles';
 import Navbar from './Navbar';
 import { Decorator } from '../common/commonComponent';
 import ArrowDownwardRoundedIcon from '@material-ui/icons/ArrowDownwardRounded';
+import DrawerComponent from './DrawerComponent';
 
 function HeadersComponent() {
     const classes = useStyles();
@@ -12,9 +13,21 @@ function HeadersComponent() {
         setInitialState(initialState);
     };
 
+    const navlinks = [
+        { label: "About", Id: "About" },
+        { label: "Portfolio", Id: "Portfolio" },
+        { label: "Contact", Id: "Contact" },
+    ]
+
     return (
-        <Box className={classes.HeaderWrapper}>
-            <Navbar />
+        <Box className={classes.HeaderWrapper} id="Header">
+            <Navbar navlinks={navlinks} handleDrawerToggler={handleDrawerToggler} />
+            <DrawerComponent initialState={initialState} navlinks={navlinks} handleDrawerToggler={handleDrawerToggler} />
+            <DrawerComponent
+                initialState={initialState}
+                navlinks={navlinks}
+                handleDrawerToggler={handleDrawerToggler}
+            />
 
             <Box className={classes.Headercontainer}>
                 <Typography variant='h3' component="h4" className={classes.headerTitle}>

@@ -93,5 +93,19 @@ export const useStyles = makeStyles((theme) => ({
             },
         },
     },
+
+    //drawer style
+    drawer: {
+        width: "250px",
+        height: "100vh",
+    },
+    drawerContainer: {
+        width: "250px",
+        height: "100vh",
+        backgroundColor: Theme.colors.primary1,
+    },
+    listItem: {
+        color: Theme.colors.base2,
+    },
 }));
 

@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from '@material-ui/core';
+import { Box, Button, Container, Grid, Typography } from '@material-ui/core';
 import React from 'react';
 import { RenderSectionHeading } from '../common/commonComponent';
 // import { useStyles } from '../HeaderComponents/HeaderStyles';
@@ -50,7 +50,7 @@ export default function Portfolio() {
                     })}
                 </Grid>
             </Grid>
-            <container maxWidth="xl">
+            <Container maxWidth="xl">
                 <Grid container spacing={2}>
                     {portfolioData.map((item, i) => (
                         <Grid item xs={6} sm={4} lg={3} key={i}>
@@ -69,7 +69,7 @@ export default function Portfolio() {
                         </Grid>
                     ))}
                 </Grid>
-            </container>
+            </Container>
         </Box>
     )
 }
