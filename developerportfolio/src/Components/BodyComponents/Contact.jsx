@@ -5,6 +5,7 @@ import image from "../../images/contactus.jpg"
 import { RenderSectionHeading } from '../common/commonComponent';
 import { useState } from 'react';
 import { RenderInputText } from '../common/FormComponent';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 export default function Contact() {
@@ -35,70 +36,72 @@ export default function Contact() {
 
     return (
         <Box className={classes.section} id='Contact'>
-            <Container>
-                <Grid container spacing={1}>
-                    <Grid item sm={5} >
-                        <Box component={Hidden} xsDown>
-                            <img
-                                src={image}
-                                alt="about me"
-                                className={classes.responsiveImg}
-                            />
-                        </Box>
+            <ScrollAnimation animateIn='fadeIn'>
+                <Container maxWidth='xl'>
+                    <Grid container spacing={1}>
+                        <Grid item sm={5} >
+                            <Box component={Hidden} xsDown>
+                                <img
+                                    src={image}
+                                    alt="about me"
+                                    className={classes.responsiveImg}
+                                />
+                            </Box>
 
+                        </Grid>
+                        <Grid item xs={12} sm={7}>
+                            {RenderSectionHeading({
+                                heading: "Message Me",
+                                smallTxt: "Wish to contact me!",
+                                description: "Please use the below given form to send me your message"
+                            })}
+                            <br />
+                            <form onSubmit={handleSubmit}>
+                                <Grid container
+                                    direction="row"
+                                    justifyContent="center"
+                                    alignItems="center">
+                                    <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
+                                        {RenderInputText({
+                                            label: "First Name",
+                                            name: "firstName",
+                                            state: state,
+                                            onChange: handleOnChange,
+                                        })}
+                                    </Grid>
+                                    <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
+                                        {RenderInputText({
+                                            label: "Email",
+                                            name: "email",
+                                            state: state,
+                                            onChange: handleOnChange,
+                                        })}
+                                    </Grid>
+                                    <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
+                                        {RenderInputText({
+                                            label: "Messages",
+                                            name: "messages",
+                                            state: state,
+                                            onChange: handleOnChange,
+                                            multiline: true,
+                                            rows: 5,
+                                        })}
+                                    </Grid>
+                                    <Grid item xs={12} sm={8} style={{ marginBottom: "16px" }}>
+                                        <Button
+                                            variant="outlined"
+                                            type="submit"
+                                            fullWidth={true}
+                                            className={classes.submitBtn}>
+                                            Submit
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                            </form>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12} sm={7}>
-                        {RenderSectionHeading({
-                            heading: "Message Me",
-                            smallTxt: "Wish to contact me!",
-                            description: "Please use the below given form to send me your message"
-                        })}
-                        <br />
-                        <form onSubmit={handleSubmit}>
-                            <Grid container
-                                direction="row"
-                                justifyContent="center"
-                                alignItems="center">
-                                <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
-                                    {RenderInputText({
-                                        label: "First Name",
-                                        name: "firstName",
-                                        state: state,
-                                        onChange: handleOnChange,
-                                    })}
-                                </Grid>
-                                <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
-                                    {RenderInputText({
-                                        label: "Email",
-                                        name: "email",
-                                        state: state,
-                                        onChange: handleOnChange,
-                                    })}
-                                </Grid>
-                                <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
-                                    {RenderInputText({
-                                        label: "Messages",
-                                        name: "messages",
-                                        state: state,
-                                        onChange: handleOnChange,
-                                        multiline: true,
-                                        rows: 5,
-                                    })}
-                                </Grid>
-                                <Grid item xs={12} sm={8} style={{ marginBottom: "16px" }}>
-                                    <Button
-                                        variant="outlined"
-                                        type="submit"
-                                        fullWidth={true}
-                                        className={classes.submitBtn}>
-                                        Submit
-                                    </Button>
-                                </Grid>
-                            </Grid>
-                        </form>
-                    </Grid>
-                </Grid>
-            </Container>
+                </Container>
+            </ScrollAnimation>
         </Box>
     )
 }

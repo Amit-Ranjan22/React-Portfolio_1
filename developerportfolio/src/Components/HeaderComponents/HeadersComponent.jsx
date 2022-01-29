@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import { Decorator } from '../common/commonComponent';
 import ArrowDownwardRoundedIcon from '@material-ui/icons/ArrowDownwardRounded';
 import DrawerComponent from './DrawerComponent';
+import Typed from "react-typed";
 
 function HeadersComponent() {
     const classes = useStyles();
@@ -31,10 +32,20 @@ function HeadersComponent() {
 
             <Box className={classes.Headercontainer}>
                 <Typography variant='h3' component="h4" className={classes.headerTitle}>
-                    Hello!! I Am Full-Stack,|
+                    Hello!! I am a <span style={{ paddingRight: "5px" }}></span>
+                    <Typed
+                        strings={[
+                            "Web-Developer,",
+                            "ASTQB Certified Tester,",
+                            "ASTQB Certified Agile Tester,",
+                        ]}
+                        typeSpeed={60}
+                        backSpeed={60}
+                        loop
+                    />
                 </Typography>
                 <Typography variant='h3' component="h4" className={classes.headerDesc}>
-                    Web-Developer
+                    Full-Stack Web-Developer
                 </Typography>
 
                 {Decorator({
