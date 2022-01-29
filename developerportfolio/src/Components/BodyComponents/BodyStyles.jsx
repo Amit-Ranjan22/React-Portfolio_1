@@ -94,6 +94,19 @@ export const useStyles = makeStyles((theme) => ({
         '&:hover':{
             backgroundColor: Theme.colors.primary1,
         }
+    },
+    footerContainer:{
+        backgroundColor:Theme.colors.primary1,
+        color:Theme.colors.base2,
+        padding:theme.spacing(2),
+        position:"relative",
+    },
+    iconButton:{
+        position:"absolute",
+        right:5,
+        top:-25,
+        backgroundColor:Theme.colors.primary,
+        color:Theme.colors.base2,
     }
 
 
